@@ -1,0 +1,49 @@
+<div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Patient Registration Form</mat-card-title>
+      </mat-card-header>
+
+      <form class="example-form">
+  
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" [(ngModel)]="givenName" required placeholder="Enter your First Name">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" [(ngModel)]="lastName" required placeholder="Enter your Last Name">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input matInput type="date" [(ngModel)]="dob" required placeholder="Date of Birth">
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Gender</mat-label>
+            <select matNativeControl required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" [(ngModel)]="address" required placeholder="Address">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input  matInput type="number" [(ngModel)]="phoneNo" required placeholder="Phone Number">
+          </mat-form-field>
+  
+          <mat-form-field class="full-width-input">
+            <input matInput type="password"  [(ngModel)]="password" required placeholder="Password" formControlName="password" required>
+          </mat-form-field>
+  
+        </mat-card-content>
+  
+        <button (click)="patientRegister()" mat-stroked-button color="accent" class="btn-block">Register</button>
+  
+      </form>
+    </mat-card>
+  </div>

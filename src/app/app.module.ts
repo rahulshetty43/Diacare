@@ -1,31 +1,49 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import Amplify, { Auth } from 'aws-amplify';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material/material.module';
-import { SignupComponent } from './signup/signup.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { RegisterComponent } from './signup/register/register.component';
+import { MaterialModule } from './shared/material/material.module';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { RoutingComponents } from './routing/routing.module';
 import { RoutingModule } from './routing/routing.module';
+import { PatientComponent } from './patient/patient.component';
+import { DoctorComponent } from './doctor/doctor.component';
+import { PatientRegistrationComponent } from './patient/patient-registration/patient-registration.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+Amplify.configure({
+    Auth:{
+      mandatorySignIn:true,
+      region: 'us-east-2',
+      userPoolId: 'us-east-2_PtsgTomDC',
+      userPoolWebClientId: '6mrpdh7jtkrfgv0a26nr332068',
+      authenticationFlowType:'USER_PASSWORD_AUTH'
+    }
+  });
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent,
     HeaderComponent,
     FooterComponent,
-    RegisterComponent
+    RoutingComponents,
+    PatientComponent,
+    DoctorComponent,
+    PatientRegistrationComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    RoutingModule
+    RoutingModule,
+    FormsModule,
+    ReactiveFormsModule
     
   ],
   providers: [],

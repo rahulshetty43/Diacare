@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-diacare-dev-122628-authRole",
+      "UnauthRoleArn": "arn:aws:iam::418211856918:role/amplify-diacare-dev-122628-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::418211856918:role/amplify-diacare-dev-122628-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-diacare-dev-122628-deployment",
+      "UnauthRoleName": "amplify-diacare-dev-122628-unauthRole",
+      "StackName": "amplify-diacare-dev-122628",
+      "StackId": "arn:aws:cloudformation:us-east-2:418211856918:stack/amplify-diacare-dev-122628/19d2a7d0-5c7f-11eb-9b7f-06ba2ddc5f84",
+      "AmplifyAppId": "d1dtmsm1csrmdy"
+    },
+    "categories": {
+      "auth": {
+        "cognitoDiacare": {}
+      }
+    }
+  }
+}
